@@ -1,2 +1,2 @@
 # Projects
-A collection of my projects.
+This folder is a basic collection of a few of my projects.
