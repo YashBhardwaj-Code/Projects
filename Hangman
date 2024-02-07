@@ -1,0 +1,40 @@
+import random
+import time
+
+print("Enter a few words that you can guess.")
+
+time.sleep(1)
+
+word1 = input("Enter a word: ").strip()
+time.sleep(0.5)
+word2 = input("Enter a word: ").strip()
+time.sleep(0.5)
+word3 = input("Enter a word: ").strip()
+time.sleep(0.5)
+word4 = input("Enter the last word: ").strip()
+
+words = [word1, word2, word3, word4]
+
+time.sleep(1)
+
+#Game Starts Now
+
+print("\n" + "We will begin the game now.")
+time.sleep(0.5)
+word = random.choice(words)
+guesses = "5"
+
+print("Your word is", len(word), "letters long.")
+time.sleep(0.5)
+print("\n" + "You have", guesses, "guesses.")
+
+while int(guesses) > 0:
+  guess = input("Enter your guess: ")
+  if guess != word:
+    guesses = int(guesses) - 1
+    print("That is incorrect! You have", guesses, "guesses left.")
+  if guess == word:
+    print("Youre correct! You win!")
+    exit()
+  if guesses == 0:
+    print(f"You are out of guesses! The word was {word}")
